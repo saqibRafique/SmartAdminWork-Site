@@ -1,0 +1,45 @@
+<header class="header" [class.scrolled]="isScrolled">
+  <div class="container">
+    <button
+      class="brand"
+      type="button"
+      (click)="scrollToTop()"
+      aria-label="SmartAdminWork home"
+    >
+      <img src="assets/brand/smartadminwork-logo.png" alt="SmartAdminWork" />
+    </button>
+
+    <nav class="nav" aria-label="Primary">
+      <a (click)="scrollTo('features')">Features</a>
+      <a (click)="scrollTo('how-it-works')">How it Works</a>
+      <a (click)="scrollTo('contact')">Request a Demo</a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button
+      class="menu-btn"
+      type="button"
+      mat-icon-button
+      (click)="toggleMobileMenu()"
+      aria-label="Open menu"
+    >
+      <mat-icon>{{ isMobileMenuOpen ? "close" : "menu" }}</mat-icon>
+    </button>
+
+    <mat-menu #mobileMenu="matMenu">
+      <button mat-menu-item (click)="scrollTo('features')">Features</button>
+      <button mat-menu-item (click)="scrollTo('how-it-works')">
+        How it Works
+      </button>
+      <button mat-menu-item (click)="scrollTo('contact')">
+        Request a Demo
+      </button>
+    </mat-menu>
+  </div>
+  <!-- Full-width mobile drawer -->
+  <div class="mobile-drawer" [class.open]="isMobileMenuOpen">
+    <a (click)="scrollToAndClose('features')">Features</a>
+    <a (click)="scrollToAndClose('how-it-works')">How it Works</a>
+    <a (click)="scrollToAndClose('contact')">Request a Demo</a>
+  </div>
+</header>
