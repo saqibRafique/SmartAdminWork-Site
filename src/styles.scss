@@ -1,0 +1,51 @@
+/* src/styles.scss */
+@use "@angular/material" as mat;
+
+/* 1) Material core */
+@include mat.core();
+
+/* 2) Brand palettes (approx. SmartAdminWork blue + green)
+   You can fine-tune shades later. */
+$smartadmin-primary: mat.define-palette(mat.$blue-palette, 800, 700, 900);
+$smartadmin-accent: mat.define-palette(mat.$green-palette, 600, 500, 800);
+$smartadmin-warn: mat.define-palette(mat.$red-palette);
+
+/* 3) Theme object */
+$smartadmin-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $smartadmin-primary,
+      accent: $smartadmin-accent,
+      warn: $smartadmin-warn,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+/* 4) Apply theme to all Material components */
+@include mat.all-component-themes($smartadmin-theme);
+
+/* 5) Global base styles */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #ffffff;
+  color: #0f172a; /* slate-like */
+}
+
+/* 6) Optional: consistent section padding utility */
+.section {
+  padding: 5rem 8%;
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 3.5rem 6%;
+  }
+}

@@ -1,0 +1,27 @@
+.footer {
+  padding: 1.2rem 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(18, 120, 145, 0.55),
+    rgba(8, 47, 73, 0.55)
+  );
+
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  text-align: center;
+}
+
+.footer span {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+}
