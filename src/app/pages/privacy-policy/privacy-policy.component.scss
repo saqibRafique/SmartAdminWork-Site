@@ -1,0 +1,105 @@
+:host {
+    display: block;
+}
+
+/* Page background (matches your header/footer vibe) */
+.privacy-page {
+    min-height: 100vh;
+    padding: 56px 16px 56px;
+    /* top spacing in case header is visible in some flows */
+    background: linear-gradient(180deg, #0b3c5d 0%, #082f49 45%, #07273f 100%);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+}
+
+/* Card container for readability */
+.privacy-card {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 28px 26px;
+
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22),
+        0 1px 0 rgba(255, 255, 255, 0.06) inset;
+}
+
+/* Header area */
+.privacy-header {
+    margin-bottom: 18px;
+}
+
+.title {
+    margin: 0 0 6px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.effective-date {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+/* Body typography */
+.privacy-body {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.98rem;
+}
+
+.privacy-body p {
+    margin: 0 0 12px;
+    line-height: 1.75;
+}
+
+.privacy-body h2 {
+    margin: 22px 0 10px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.privacy-body ul {
+    margin: 0 0 14px 18px;
+    padding: 0;
+}
+
+.privacy-body li {
+    margin: 6px 0;
+    line-height: 1.65;
+}
+
+/* Links */
+.link {
+    color: rgba(120, 220, 235, 0.95);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Mobile refinements */
+@media (max-width: 600px) {
+    .privacy-page {
+        padding: 72px 12px 44px;
+    }
+
+    .privacy-card {
+        padding: 20px 16px;
+        border-radius: 14px;
+    }
+
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .privacy-body {
+        font-size: 0.95rem;
+    }
+}
