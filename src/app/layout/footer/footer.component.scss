@@ -1,27 +1,71 @@
 .footer {
-  padding: 1.2rem 0;
+  position: relative;
+  width: 100%;
+  z-index: 900;
 
-  background: linear-gradient(
-    180deg,
-    rgba(18, 120, 145, 0.55),
-    rgba(8, 47, 73, 0.55)
-  );
+  /* Symmetric “aqua glass” effect like header */
+  background: linear-gradient(180deg, #0b3c5d 0%, #082f49 45%, #07273f 100%);
 
   backdrop-filter: blur(14px) saturate(160%);
   -webkit-backdrop-filter: blur(14px) saturate(160%);
 
+  /* Mirror border placement (header has border-bottom) */
   border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  /* Give it presence */
+  padding: 14px 0;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
+.footer .container {
+  /* Keep same horizontal rhythm as header container */
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 0.9rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
   text-align: center;
 }
 
-.footer span {
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.75);
+.footer-text {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.separator {
+  margin: 0 10px;
+  opacity: 0.55;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: rgba(120, 220, 235, 0.9);
+  transition: width 160ms ease;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .separator {
+    display: none;
+  }
 }

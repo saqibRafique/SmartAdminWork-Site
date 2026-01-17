@@ -420,3 +420,6 @@ FodyWeavers.xsd
 # build
 dist/
 src/assets/video
+
+# angular
+.angular
