@@ -34,7 +34,7 @@
 .container {
   box-sizing: border-box;
   max-width: 100%;
-  padding: 0.7rem 1.5rem;
+  padding: 0.7rem 7.7rem;
 
   display: flex;
   align-items: center;
@@ -99,6 +99,10 @@
   .nav {
     display: none;
   }
+
+  .container {
+    padding: 0.7rem 1.5rem;
+  }
 }
 
 /* Prevent accidental horizontal scroll */
@@ -154,7 +158,7 @@
 
     color: rgba(255, 255, 255, 0.92);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.01em;
     cursor: pointer;
   }

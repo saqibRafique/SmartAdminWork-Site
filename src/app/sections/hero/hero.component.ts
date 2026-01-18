@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrls: ['./hero.component.scss'],
 })
 export class HeroComponent {
+
   private calendlyUrl = 'https://calendly.com/azhar-rafique-thinkandcode/';
 
   openCalendly() {
